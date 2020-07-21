@@ -7,9 +7,29 @@ async function getCity() {
 
 getCity().then((data) => {
   const Weather = new weather(data.city);
-  console.log(data.city);
-  Weather.getWeather().then((data) => {
-    console.log(data);
-    ui.showAll(data);
-  });
+  Weather.getWeather()
+    .then((data) => {
+      ui.showAll(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      ui.notFound();
+    });
+});
+
+document.getElementById("w-change-button").addEventListener("click", () => {
+  const city = document.getElementById("city").value;
+  if (city === "") {
+    alert("Please give a valid Location");
+  } else {
+    const Weather = new weather(city);
+    Weather.getWeather()
+      .then((data) => {
+        ui.showAll(data);
+      })
+      .catch((error) => {
+        console.log(error);
+        ui.notFound();
+      });
+  }
 });

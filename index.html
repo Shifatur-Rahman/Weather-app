@@ -28,7 +28,7 @@
           <h2 class="location mt-4">city</h2>
           <h4 class="situation">weather</h4>
           <h4 class="degree">temperature</h4>
-          <img id="w-icon" src="" />
+          <img id="w-icon" />
           <ul class="list-group mt-3" id="details">
             <li class="list-group-item bg-custom" id="humidity">humidity</li>
             <li class="list-group-item bg-custom" id="pressure">pressure</li>
@@ -60,7 +60,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="staticBackdropLabel">
-                    Modal title
+                    Name
                   </h5>
                   <button
                     type="button"
@@ -75,10 +75,12 @@
                   <form id="w-form">
                     <div class="form-group">
                       <label for="city">city</label>
-                      <label type="text" id="city" class="form-control"></label>
+                      <input type="text" id="city" class="form-control" />
                     </div>
                   </form>
                 </div>
+                <p>Location</p>
+
                 <div class="modal-footer">
                   <button
                     type="button"
@@ -86,7 +88,7 @@
                     class="btn btn-secondary bg-custom"
                     data-dismiss="modal"
                   >
-                    Close
+                    ADD
                   </button>
                 </div>
               </div>
