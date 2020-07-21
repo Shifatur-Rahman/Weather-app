@@ -5,6 +5,7 @@ async function getCity() {
 }
 
 getCity().then((data) => {
-  var location = document.querySelector(".location");
-  location.textContent = data.city;
+  const Weather = new weather(data.city);
+  console.log(data.city);
+  Weather.getWeather().then((data) => console.log(data));
 });
