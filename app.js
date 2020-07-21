@@ -1,3 +1,4 @@
+const ui = new UI();
 async function getCity() {
   const res = await fetch("https://ipapi.co/json");
   const newRes = await res.json();
@@ -7,5 +8,8 @@ async function getCity() {
 getCity().then((data) => {
   const Weather = new weather(data.city);
   console.log(data.city);
-  Weather.getWeather().then((data) => console.log(data));
+  Weather.getWeather().then((data) => {
+    console.log(data);
+    ui.showAll(data);
+  });
 });

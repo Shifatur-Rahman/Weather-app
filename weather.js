@@ -1,7 +1,7 @@
 class weather {
   constructor(city) {
     this.city = city;
-    this.appid = "bd10046a88c7d5c3a2af42bba2e0df7e";
+    this.appid = "577e5367fd190179a172941ba364f1e4";
   }
   //Fetch weather info from API
   async getWeather() {
