@@ -17,7 +17,8 @@ getCity().then((data) => {
     });
 });
 
-document.getElementById("w-change-button").addEventListener("click", () => {
+document.getElementById("w-change-button").addEventListener("click", (e) => {
+  e.preventDefault();
   const city = document.getElementById("city").value;
   if (city === "") {
     alert("Please give a valid Location");
