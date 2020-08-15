@@ -14,7 +14,7 @@ getCity().then((data) => {
     .catch((error) => {
       console.log(error);
       ui.notFound();
-    });
+    });   
 });
 
 document.getElementById("w-change-button").addEventListener("click", (e) => {
